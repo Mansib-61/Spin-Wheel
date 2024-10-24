@@ -24,9 +24,3 @@ To run the project locally, follow these steps:
 - Node.js (for React)
 - Java (for Spring Boot)
 - MongoDB (if used for additional features)
-
-### Clone the Repository
-
-```bash
-git clone https://github.com/mansib-61/Spin.git
-cd Spin
