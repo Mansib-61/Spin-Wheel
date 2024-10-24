@@ -1,0 +1,99 @@
+.spin-wheel-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spin-button {
+  position: absolute; /* Position the button in the center of the wheel */
+  top: 50%; /* Center it vertically */
+  left: 50%; /* Center it horizontally */
+  transform: translate(-50%, -50%); /* Adjust to be perfectly centered */
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 10px;
+  z-index: 10; /* Ensure it's above the wheel */
+}
+
+.wheel-container {
+  position: relative;
+}
+
+.wheel {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 5px solid #333;
+  transform: rotate(0deg); /* Initial rotation */
+  transition: transform 4s ease-out; /* Smooth spinning effect */
+}
+
+.segment {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: transparent;
+  transform-origin: 100% 100%;
+  clip-path: polygon(100% 0%, 0% 0%, 50% 100%);
+}
+
+.segment:nth-child(1) {
+  transform: rotate(0deg);
+  background-color: #ff9999; /* Segment 1 Color */
+}
+
+.segment:nth-child(2) {
+  transform: rotate(60deg);
+  background-color: #99ccff; /* Segment 2 Color */
+}
+
+.segment:nth-child(3) {
+  transform: rotate(120deg);
+  background-color: #99ff99; /* Segment 3 Color */
+}
+
+.segment:nth-child(4) {
+  transform: rotate(180deg);
+  background-color: #ffcc99; /* Segment 4 Color */
+}
+
+.segment:nth-child(5) {
+  transform: rotate(240deg);
+  background-color: #ccccff; /* Segment 5 Color */
+}
+
+.segment:nth-child(6) {
+  transform: rotate(300deg);
+  background-color: #ff99cc; /* Segment 6 Color */
+}
+
+.segment span {
+  position: absolute;
+  top: 30%; /* Adjusted for better positioning */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+}
+
+.pointer {
+  position: absolute;
+  top: -30px; /* Position the pointer above the wheel */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 30px solid red; /* Pointer color */
+  z-index: 10; /* Make sure it's above the wheel */
+}

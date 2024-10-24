@@ -1,0 +1,15 @@
+.result-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .highlighted-club {
+    font-size: 36px;
+    color: #ff6600;
+    text-shadow: 2px 2px 5px #000;
+    margin-top: 20px;
+  }
+  
